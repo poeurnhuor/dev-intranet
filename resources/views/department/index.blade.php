@@ -5,6 +5,12 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content">
+            @if (Session::has('message'))
+                <div class="alert alert-info alert-dismissible fade in" style="padding: 5px;margin: 0 7px 0 0;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close" style="margin: 1px 24px;text-decoration: none;">&times;</a>
+                    {!! session('message') !!}
+                </div>
+            @endif
             <div class="content-style">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -51,7 +51,6 @@ desired effect
 
   <!-- Sidebar -->
   @include('partials.dashboard-sidebar')
-
   <!-- Content Wrapper. Contains page content -->
   @yield('content')
   <!-- /.content-wrapper -->

@@ -53,7 +53,7 @@ function btnSubmitEditHtmlId() {
 }
 
 function btnSubmitCreate($text = 'Create') {
-    return '<button type="submit" class="btn btn-info btn-fill pull-right m-left-5" id="' . btnSubmitCreateHtmlId(). '">' . $text. '</button>';
+    return '<button type="submit" class="btn btn-primary btn-fill pull-right m-left-5" id="' . btnSubmitCreateHtmlId(). '">' . $text. '</button>';
 }
 
 function btnSubmitEdit($text = 'Update') {
@@ -117,8 +117,8 @@ function closeForm() {
 function formCreateFooter($action, $btnText = "Create") {
     $markup =  '<footer class="form-fixed-footer">';
     $markup .= '<div class="container-fluid">';
-    $markup .= btnSubmitCreate($btnText);
     $markup .= '<a href="' . backendUrl($action). '" class="btn btn-danger btn-fill pull-right">Cancel</a>';
+    $markup .= btnSubmitCreate($btnText);
     $markup .= '</div>';
     $markup .= '</footer>';
 

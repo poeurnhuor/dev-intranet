@@ -11,6 +11,9 @@
 <!-- Ionicons -->
 <link rel="stylesheet" href="{{ asset('//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css') }}">
 
+<!-- Sweet Alert -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset('css/AdminLTE.min.css') }}">
 
@@ -22,3 +25,4 @@
 
 <!-- Customization style -->
 <link rel="stylesheet" href="{{ asset('css/customize/style.css') }}">
+

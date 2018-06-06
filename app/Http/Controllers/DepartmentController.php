@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Department;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
+use Intervention\Image\Facades\Image;
 
 class DepartmentController extends Controller
 {
@@ -34,7 +40,22 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+
+        $depart = new Department();
+
+        $depart->fill([
+            'name' => $request->input('description'),
+            'description' => $request->input('description'),
+            'status' => $request->input('status')
+        ])->save();
+
+        Session::flash('message', 'Department has been created successfully!');
+
+        return redirect(backendUrl('department'));
     }
 
     /**

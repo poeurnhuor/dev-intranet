@@ -19,6 +19,7 @@ Route::get('/', function () {
 //Auth::routes();
 
  Route::get('dashboard', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('my-notification/{type}', 'HomeController@myNotification');
 // it's equal to above route Route::get('dashboard', 'HomeController@index')->name('home');
 Route::get('settings/profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
 Route::get('news', ['as' => 'news', 'uses' => 'NewsController@index']);
