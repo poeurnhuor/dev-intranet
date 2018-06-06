@@ -2,104 +2,65 @@
 
 @section('content')
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        List all department
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content">
+            <div class="content-style">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6">
+                            <h3 class="title-header">List all departments</h3>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="pull-right">
+                                <a href="{{ url("department/create") }}">
+                                <button class="btn btn-primary btn-add-new">
+                                        <span class="icon-btn-style">
+                                        <i class="pe-7s-plus pull-left text-new"></i>
+                                        New department
+                                        </span>
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom-style"></div>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>New Orders</p>
+            <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Human Resource</td>
+                                    <td>This is the HR department</td>
+                                    {{--<td>Edit | Delete</td>--}}
+                                    <td class="td-action">
+                                        <a href="#" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Edit"><i class="pe-7s-pen action_edit"></i></a>
+                                        <form action="#" data-id="1" class="form_delete_1" style="display:inline;">
+                                            <a href="#" class="btn btn-default delete" data-toggle="tooltip" style="border: 1px solid #ef0b0b;" data-original-title="Delete"><i class="pe-7s-trash action_delete"></i></a>
+                                        </form>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <!-- /.content -->
             </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
         </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>4</h3>
-
-              <p>Meeting Room Available</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>5</h3>
-
-              <p>Out of Office</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-android-exit"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>2</h3>
-
-              <p>Sick Leave</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-medkit"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-sm-8">
-          <div class="box box-widget">
-            <div class="box-header with-border">
-              <h3 class="box-title">Latest News</h3>
-            </div>
-            <div class="box-body">
-              <p>This is news</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="box box-widget">
-            <div class="box-header with-border">
-              <h3 class="box-title">Birthdays</h3>
-            </div>
-            <div class="box-body">
-              <p>This is bla-bla-bla</p>
-            </div>
-          </div>
-        </div>      
-      </div>
-    </section>
-    <!-- /.content -->
-</div>
+    </div>
 
 @endsection

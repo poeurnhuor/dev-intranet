@@ -36,10 +36,12 @@
           <a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
         </li>
         <li {{ ((Request::segment(1) == "employee") ? 'class=active' : '') }}>
-          <a href="{{ url('employee') }}"><i class="fa fa-users"></i> <span>Employees</span></a>
+          <a href="{{ url('employee') }}">
+            <i class="pe-7s-user-female" style="font-weight: bold;"> <span>Employees</span></i>
+          </a>
         </li>
         <li {{ ((Request::segment(1) == "department") ? 'class=active' : '') }}>
-          <a href="{{ url('department') }}"><i class="fa fa-users"></i> <span>Department</span></a>
+          <a href="{{ url('department') }}"><i class="pe-7s-keypad" style="font-weight: bold;"> <span>Department</span></i></a>
         </li>
         <li {{ ((Request::segment(1) == "news") ? 'class=active' : '') }}>
           <a href="{{ route('news') }}"><i class="fa fa-newspaper-o"></i> <span>News &amp; Regulatory</span></a>

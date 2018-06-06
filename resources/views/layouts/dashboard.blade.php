@@ -57,7 +57,7 @@ desired effect
   <!-- /.content-wrapper -->
 
   <!-- Footer -->
-  @include('partials.dashboard-footer')
+  {{--@include('partials.dashboard-footer')--}}
 
   <!-- Control Sidebar -->
   @include('partials.dashboard-control-sidebar')
