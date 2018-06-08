@@ -1,21 +1,22 @@
 /* block button Edit and delete*/
-.action_edit {
-    color: #227fc1;
-    font-weight: 600;
-}
+/*.action_edit {*/
+    /*color: #227fc1;*/
+    /*font-weight: 600;*/
+/*}*/
 
-.td-action .btn {
-    margin: 0px;
-    padding: 0px 6px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-    background-color: #ffffff;
-    border: 1px solid #227fc1;
-}
+/*.td-action .btn {*/
+    /*margin: 0px;*/
+    /*padding: 0px 6px;*/
+    /*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);*/
+    /*background-color: #ffffff;*/
+    /*border: 1px solid #227fc1;*/
+/*}*/
 
-.action_delete {
-    color: #ef0b0b;
-    font-weight: 600;
-}
+/*.action_delete {*/
+    /*color: #ef0b0b;*/
+    /*font-weight: 600;*/
+/*}*/
+/* End block button Edit and delete*/
 
 .content-style{
     background-color: #ffffff;
@@ -43,7 +44,6 @@
     font-weight: bold; font-size: 20px;
 }
 
-/* End block button Edit and delete*/
 
 /*Button footer style*/
 .form-fixed-footer {
@@ -67,3 +67,42 @@
     text-transform:none!important
 }
 /*End button footer style*/
+
+/*Message alert*/
+#success-alert{
+    padding: 5px;
+    margin: 0 7px 0 0;width: 40%;
+    float: right;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+#alert-dismiss{
+    margin: 1px 24px;
+    text-decoration: none;
+    background-color: #ffffff;
+    width: 22px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    top: 0;
+}
+/* End Message Alert*/
+
+form.form-inline {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background-color: transparent;
+    font-weight: 400;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    border-color: #888;
+    color: #888;
+}
+
+#custom_btn{
+    background-color: transparent !important;
+    color:#6996F8;
+}
+

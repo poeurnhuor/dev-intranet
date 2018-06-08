@@ -17,4 +17,13 @@ class Department extends Model
     protected $fillable = [
         'name', 'description', 'status', 'created_at', 'updated_at'
     ];
+
+    public function getDepartment()
+    {
+        return DB::table('departments')
+            ->select('id','name','description','status')
+            ->orderBy('id', 'DESC')
+            ->where('status', '1')
+            ->paginate(12);
+    }
 }

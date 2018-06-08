@@ -19,7 +19,11 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('department/index');
+        $dep = new Department();
+
+        return view('department/index')->with([
+            'departments' => $dep->getDepartment(),
+        ]);
     }
 
     /**
@@ -48,7 +52,7 @@ class DepartmentController extends Controller
         $depart = new Department();
 
         $depart->fill([
-            'name' => $request->input('description'),
+            'name' => $request->input('name'),
             'description' => $request->input('description'),
             'status' => $request->input('status')
         ])->save();
@@ -66,7 +70,7 @@ class DepartmentController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -77,7 +81,10 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        return view('department/edit')->with([
+            'department' => Department::findOrFail($id),
+        ]);
     }
 
     /**
@@ -89,7 +96,22 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+
+        $depart = Department::findOrFail($id);
+
+        $depart->fill([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'status' => $request->input('status')
+        ])->save();
+
+        Session::flash('message', 'Department has been updated successfully!');
+
+        return redirect(backendUrl('department'));
     }
 
     /**
@@ -100,6 +122,9 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Department::destroy($id);
+        Session::flash('message_type', 'warning');
+        Session::flash('message', 'Department has been deleted!');
+        return redirect(backendUrl('department'));
     }
 }
